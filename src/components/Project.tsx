@@ -110,6 +110,7 @@ export const Project = ({
         transition={{
         duration: 0.75
     }}>
+        <a href={code} target="_blank" rel="noopener noreferrer">
         <ProjectImage
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
@@ -125,6 +126,7 @@ export const Project = ({
                     : "0deg"
             }}/>
         </ProjectImage>
+        </a>
         <ProjectCopy>
             <Reveal width="100%">
                 <ProjectTitle>
