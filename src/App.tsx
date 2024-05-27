@@ -6,6 +6,8 @@ import { ColorModeContext } from './contexts/ColorModeContext';
 import theme from './theme';
 import { colorModeTag, dark, light } from './utils/constants/palette';
 import { routes } from './utils/constants/routes';
+import ImageContext from './contexts/ImageContext';
+import image from "./assets/bgImage.jpg";
 
 const rootRoutes = Object.values(routes);
 
@@ -25,9 +27,18 @@ function App() {
     localStorage.setItem(colorModeTag, JSON.stringify(mode));
   }, [mode]);
 
+  const [loadedImage, setLoadedImage] = useState<HTMLImageElement|null>(null);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setLoadedImage(img);
+    img.src = image;
+  }, []);
+
 
   return(
     <ColorModeContext.Provider value={colorMode}>
+      <ImageContext.Provider value={loadedImage}>
       <ThemeProvider theme={theme(dark)}> {/**. */}
         <CssBaseline/>
           <BrowserRouter>
@@ -38,6 +49,7 @@ function App() {
             </AnimatePresence>
           </BrowserRouter>
       </ThemeProvider>
+      </ImageContext.Provider>
     </ColorModeContext.Provider>
   );
 }

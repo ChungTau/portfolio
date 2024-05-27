@@ -1,11 +1,11 @@
 import {Button, IconButton, styled, useTheme} from "@mui/material";
 import {SectionWrapper} from "./SectionWrapper";
-import image from "../assets/bgImage.jpg";
 import {Reveal} from "./Reveal";
-import React from "react";
+import React, { useContext } from "react";
 import TextSpan from "./TextSpan";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {github} from "../utils/constants/info";
+import ImageContext from "../contexts/ImageContext";
 const words = "Hey, I\'m Edward".split(" ");
 
 const HeroSectionWrapper = styled(SectionWrapper)({
@@ -24,12 +24,10 @@ const HeroBanner = styled('div')({
     backgroundSize: 'cover',
     height: '1100px',
     width: '100%',
-    backgroundImage: `radial-gradient(ellipse at center, transparent 4%, rgba(18,18,18,1) 65%), url(${image})`,
     '@media (max-width:600px)': {
         top: 0,
         marginBottom: '4.8rem',
         backgroundPosition: 'top',
-        backgroundImage: `linear-gradient(transparent 50%, rgba(18,18,18,1) 95%), url(${image})`
     }
 });
 
@@ -84,9 +82,16 @@ const HeroContactButton = styled(Button)({
 
 function Hero() {
     const theme = useTheme();
+    const loadedImage = useContext(ImageContext);
+    const HeroBannerWithImage = styled(HeroBanner)({
+        backgroundImage: `radial-gradient(ellipse at center, transparent 4%, rgba(18,18,18,1) 65%), url(${loadedImage?.src || ''})`,
+        '@media (max-width:600px)': {
+            backgroundImage: `linear-gradient(transparent 50%, rgba(18,18,18,1) 95%), url(${loadedImage?.src || ''})`
+        }
+    });
     return (
         <HeroSectionWrapper>
-            <HeroBanner/>
+            <HeroBannerWithImage/>
             <HeroCopyWrapper>
                 <Reveal>
                     <HeroTitle>

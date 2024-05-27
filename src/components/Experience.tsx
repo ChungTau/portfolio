@@ -12,7 +12,10 @@ const ExperienceCard = styled(motion.div)(({theme}) => ({
     padding: '40px 40px 24px 40px',
     position: 'relative',
     display: 'grid',
-    gridTemplateRows: '160px 40px'
+    gridTemplateRows: '160px 40px',
+    '@media (max-width:600px)':{
+        padding: '28x 20px 28px 20px',
+    }
 }));
 
 const ExperienceCardWrapper = styled('div')({perspective: 1000, padding: '2%'});
@@ -29,7 +32,12 @@ const ExperienceCardTitle = styled('div')({
         flexShrink: 0,
         maxWidth: 'calc(100% = 150px)',
         opacity: 0.7,
-        transition: '0.25s opacity'
+        transition: '0.25s opacity',
+        '@media (max-width:600px)':{
+            fontWeight: 300,
+            fontSize: '3rem',
+            letterSpacing:1.8,
+        }
     },
     'h4:hover': {
         opacity: 1
@@ -45,7 +53,12 @@ const ExperienceCardPosition = styled('div')({
         fontSize: '2.4rem',
         flexShrink: 0,
         maxWidth: 'calc(100% = 150px)',
-        color: 'var(--brand)'
+        color: 'var(--brand)',
+        '@media (max-width:600px)':{
+            fontWeight: 300,
+            fontSize: '2rem',
+            letterSpacing:1.8,
+        }
     }
 });
 
@@ -111,8 +124,15 @@ export const Experience = ({experience} : {
                 </div>
                 <Reveal width="100%">
                     <ExperienceCardFooter>
-                        <Typography sx={{fontSize: '1.5rem', fontFamily:'monospace'}}>{experience.period}</Typography>
-                        <Typography sx={{fontSize: '2.6rem', fontFamily: 'Teko',letterSpacing:1.5}}>{experience.type}</Typography>
+                        <Typography sx={{fontSize: '1.5rem', fontFamily:'monospace','@media (max-width:600px)':{
+            fontWeight: 300,
+            fontSize: '1.2rem',
+        }}}>{experience.period}</Typography>
+                        <Typography sx={{fontSize: '2.6rem', fontFamily: 'Teko',letterSpacing:1.5,'@media (max-width:600px)':{
+            fontWeight: 300,
+            letterSpacing:1.8,
+            fontSize: '2.0rem',
+        }}}>{experience.type}</Typography>
                     </ExperienceCardFooter>
                 </Reveal>
             </ExperienceCard>

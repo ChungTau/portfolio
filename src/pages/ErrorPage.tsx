@@ -1,6 +1,8 @@
 const ErrorPage = ()=>{
     return(
-        <div></div>
+        <div>
+            BadPage
+        </div>
     );
 }
 

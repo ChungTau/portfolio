@@ -16,7 +16,7 @@ const AboutSection = styled('div')({
 });
 const AboutWrapper = styled('div')({
     display: 'grid',
-    gridTemplateRows: '1fr 180px',
+    gridTemplateRows: '1fr 210px',
     gap: '2.4rem',
     '@media (max-width: 950px)': {
         gridTemplateRows: '1fr'
@@ -55,11 +55,11 @@ const AboutRow = styled('div')({
 });
 
 const AboutSkillsRow = styled('div')({
-    display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', marginTop: '0.8rem', whiteSpace: 'nowrap',
+    display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', marginTop: '0.8rem', whiteSpace: 'nowrap',
     textAlign: 'center',
     '@media (max-width:950px)':{
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr 1fr',
+        gridTemplateColumns: '1fr 1fr',
         gap: '0.8rem',
     }
 });

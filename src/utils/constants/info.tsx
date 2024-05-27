@@ -29,6 +29,18 @@ export const educations: EducationType[] = [
 
 export const experiences:ExperienceType[]=[
     {
+        position:'Software Engineer',
+        company: 'WiseSpot Company Limited',
+        period: 'Sep 2023 - May 2024',
+        type: JobType.PARTTIME
+    },
+    {
+        position:'Software Engineer',
+        company: 'WiseSpot Company Limited',
+        period: 'Aug 2023 - Aug 2023',
+        type: JobType.INTERN
+    },
+    {
         position:'App Developer',
         company: 'Candy Service Limited',
         period: 'Jul 2021 - Aug 2021',
@@ -51,6 +63,20 @@ export const experiences:ExperienceType[]=[
 export const linkedIn = 'https://www.linkedin.com/in/siu-chung-chan-483142216/';
 export const github = 'https://github.com/ChungTau';
 export const projects:ProjectType[] = [
+    {
+        title: 'Sporting Event System with 3D Map',
+        code: 'https://fyp.chungtau.com/',
+        tech: ['Next.js', 'Mapbox', 'Keycloak', 'Typescript', 'PostgreSQL', 'Docker', 'RESTful', 'Prisma'],
+        description: "The platform efficiently manages events for holders, participants, and audiences. Event holders can create, edit, and delete events, set them as public or private, and provide details. Participants can search and join events, with real-time tracking for competitive events. An interactive 3D map allows audiences to follow participants' progress and view race routes. The system offers visually appealing and user-friendly 3D maps and real-time progress updates for participants.",
+        modalContent: (
+            <>
+               <p>
+                    Pain.app is a real-time coaching app for students learning to paint.
+                    This app is my baby, designed and built on my own.
+                </p> 
+            </>
+        )
+    },
     {
         title: 'React Portfolio',
         code: 'https://github.com/',
@@ -81,7 +107,7 @@ export const projects:ProjectType[] = [
     }
 ];
 
-export const skills = ['React', 'React Native', 'Flutter', 'PHP', 'C++', 'Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'MongoDB', 'GraphQL']
+export const skills = ['React', 'React Native', 'Flutter', 'PHP', 'C++', 'Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'MongoDB', 'GraphQL', 'Spring Boot']
 export const nickname = 'Edward';
 export const name = 'Chan Siu Chung';
 export const role = 'Computer Engineering Student';
