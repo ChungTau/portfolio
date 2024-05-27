@@ -66,7 +66,7 @@ export const projects:ProjectType[] = [
     {
         title: 'Sporting Event System with 3D Map',
         code: 'https://fyp.chungtau.com/',
-        tech: ['Next.js', 'Mapbox', 'Keycloak', 'Typescript', 'PostgreSQL', 'Docker', 'RESTful', 'Prisma'],
+        tech: ['Next.js', 'Mapbox', 'Keycloak', 'Typescript', 'PostgreSQL', 'Docker', 'RESTful', 'Prisma', 'CI/CD'],
         description: "The platform efficiently manages events for holders, participants, and audiences. Event holders can create, edit, and delete events, set them as public or private, and provide details. Participants can search and join events, with real-time tracking for competitive events. An interactive 3D map allows audiences to follow participants' progress and view race routes. The system offers visually appealing and user-friendly 3D maps and real-time progress updates for participants.",
         modalContent: (
             <>
@@ -107,7 +107,7 @@ export const projects:ProjectType[] = [
     }
 ];
 
-export const skills = ['React', 'React Native', 'Flutter', 'PHP', 'C++', 'Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'MongoDB', 'GraphQL', 'Spring Boot']
+export const skills = ['React', 'React Native', 'Flutter', 'PHP', 'C++', 'Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'MongoDB', 'GraphQL', 'Spring Boot', 'CI/CD']
 export const nickname = 'Edward';
 export const name = 'Chan Siu Chung';
 export const role = 'Computer Engineering Student';
